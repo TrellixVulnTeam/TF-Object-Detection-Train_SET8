@@ -64,3 +64,5 @@ python generate_tfrecord.py --csv_input=images/test_labels.csv --image_dir=image
 ```
 python model_main_tf2.py --pipeline_config_path=training/ssd_efficientdet_d0_512x512_coco17_tpu-8.config --model_dir=training --alsologtostderr
 ```
+# Export inference graph
+python exporter_main_v2.py --trained_checkpoint_dir=training --pipeline_config_path=training/ssd_efficientdet_d0_512x512_coco17_tpu-8.config --output_directory inference_graph
